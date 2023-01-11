@@ -41,6 +41,7 @@ const redact = (blacklist, documentPath) => {
       .join('|'),
     'gi'
   );
+  console.log(blackListRegex);
   const censoredDocument = parsedFile.replace(blackListRegex, 'XXXX');
 
   return censoredDocument;

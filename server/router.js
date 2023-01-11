@@ -8,7 +8,7 @@ const errorObj = Object.freeze({
 
 const router = express.Router();
 
-router.use((_, _, next) => {
+router.use((request, response, next) => {
   setTimeout(next, 500);
 });
 
